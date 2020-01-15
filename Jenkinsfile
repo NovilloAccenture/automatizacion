@@ -25,9 +25,9 @@ spec:
         }
       }
     }
-    // stage('Build ') {
-    //   steps {
-    //     container('maven') {
-    //       sh 'mvn clean package'
+    stage('Build ') {
+      steps {
+        container('maven') {
+          sh 'mvn sonar:sonar'
   }
 }
