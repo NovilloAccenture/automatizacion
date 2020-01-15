@@ -22,13 +22,14 @@ spec:
       steps {
         container('maven') {
           //sh 'mvn clean package'
-          sh "helm ls"
-        }
+          sh 'ls -la'
+      
       }
     }
     stage('Build ') {
       steps {
         container('maven') {
+          sh 'cd sonarqube'
           sh 'ls -la'
         }
       }
