@@ -18,7 +18,7 @@ spec:
     }
   }
   stages {
-    stage('Run maven') {
+    stage('Build') {
       steps {
         container('maven') {
           //sh 'mvn clean package'
@@ -26,10 +26,10 @@ spec:
         }
       }
     }
-    stage('Build ') {
+    stage('Test ') {
       steps {
         container('maven') {
-          sh 'cd sonarqube'
+          sh 'mvn clean deploy'
           sh 'ls -la'
         
         }
