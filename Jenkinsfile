@@ -23,7 +23,7 @@ spec:
         container('maven') {
           //sh 'mvn clean package'
           sh 'ls -la'
-      
+        }
       }
     }
     stage('Build ') {
@@ -31,7 +31,7 @@ spec:
         container('maven') {
           sh 'cd sonarqube'
           sh 'ls -la'
-        }
+        
         }
       }
     }
