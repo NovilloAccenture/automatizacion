@@ -32,6 +32,7 @@ spec:
           sh 'cd sonarqube'
           sh 'ls -la'
         }
+        }
       }
     }
   }
