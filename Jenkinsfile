@@ -21,14 +21,15 @@ spec:
     stage('Run maven') {
       steps {
         container('maven') {
-          sh 'mvn clean package'
+          //sh 'mvn clean package'
+          sh "helm ls"
         }
       }
     }
     stage('Build ') {
       steps {
         container('maven') {
-          sh 'mvn sonar:sonar'
+          sh 'ls -la'
         }
       }
     }
