@@ -21,7 +21,7 @@ spec:
     stage('Build') {
       steps {
         container('maven') {
-          //sh 'mvn clean package'
+          sh 'mvn clean package'
           sh 'ls -la'
         }
       }
@@ -29,9 +29,8 @@ spec:
     stage('Test ') {
       steps {
         container('maven') {
-          sh 'mvn clean deploy'
+          sh 'mvn test'
           sh 'ls -la'
-        
         }
       }
     }
