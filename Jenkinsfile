@@ -21,10 +21,13 @@ spec:
     stage('Run maven') {
       steps {
         container('maven') {
-          sh 'mvn -version'
-          //sh 'mvn sonar:sonar'
+          sh 'mvn clean package'
         }
       }
     }
+    // stage('Build ') {
+    //   steps {
+    //     container('maven') {
+    //       sh 'mvn clean package'
   }
 }
