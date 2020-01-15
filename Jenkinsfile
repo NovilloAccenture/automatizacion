@@ -21,7 +21,7 @@ spec:
     stage('Build') {
       steps {
         container('maven') {
-          sh 'mvn clean package'
+          sh 'mvn clean package sonar:sonar'
           sh 'ls -la'
         }
       }
