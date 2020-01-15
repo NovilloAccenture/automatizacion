@@ -29,5 +29,9 @@ spec:
       steps {
         container('maven') {
           sh 'mvn sonar:sonar'
+        }
+      }
+    }
   }
 }
+
