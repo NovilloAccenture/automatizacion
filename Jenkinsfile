@@ -35,7 +35,7 @@ spec:
     stage('Sonar') {
       steps {
         container('maven') {
-          sh 'mvn sonar:sonar'
+          sh 'mvn sonar:sonar -Dproject.settings=${file}' 
         }
       }
     }
