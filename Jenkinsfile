@@ -22,7 +22,6 @@ spec:
       steps {
         container('maven') {
           sh 'mvn clean package'
-          sh 'ls -la'
         }
       }
     }
@@ -30,7 +29,13 @@ spec:
       steps {
         container('maven') {
           sh 'mvn test'
-          sh 'ls -la'
+        }
+      }
+    }
+    stage('Sonar') {
+      steps {
+        container('maven') {
+          sh 'mvn sonar:sonar'
         }
       }
     }
