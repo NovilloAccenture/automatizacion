@@ -32,10 +32,10 @@ spec:
         }
       }
     }
-    stage('Deploy') {
+    stage('Sonar') {
       steps {
         container('maven') {
-          sh 'mvn clean deploy' 
+          sh 'mvn sonar:sonar'
         }
       }
     }
